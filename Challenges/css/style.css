@@ -1,0 +1,147 @@
+/*scroll behavior*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Image styling*/
+.movie-poster {
+    border-radius: 5px;
+    filter: invert(75%);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/*footer*/
+footer td {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*table related things*/
+.specific-table {
+    padding-left: 15px;
+    border: 2px solid blueviolet;
+    margin-left: 15px;
+}
+
+.table-background-color {
+    background-color: red;
+}
+
+/*Text over image*/
+/*container holding the image and text*/
+.container {
+    position: relative;
+    text-align: center;
+    color: gold;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/*Top left*/
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/*Text fade in over image hover*/
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    padding-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: -8px -8px 0px -8px;
+    background-color: teal;
+    border-bottom: 5px solid black;
+}
+
+a {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;
+    color: rgb(247, 177, 188);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+
+a:hover {
+    background-color: rgb(149-238-223);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+/*two column layout*/
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    color: rgb(98, 9, 241);
+    height: 20px;
+    width: auto;
+}
+
+/*Paragraph effects*/
+footer p:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/*Media tag section*/
+@media screen and (max-width:600px){
+    p{
+        color: blue;
+    }
+}
