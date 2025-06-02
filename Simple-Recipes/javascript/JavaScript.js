@@ -27,6 +27,17 @@ for (var i = 0; i < closeBtn.length; i++){
         }
     }
 }
+//Automatically close the modal after 10 seconds
+setTimeout(function (){
+    //looping through all modal elements
+    for (var index in modals){
+        //checking if the modal has a style property
+        if (modals[index].style){
+            //hiding the modal after 10 seconds
+            modals[index].style.display = 'none';
+        }
+    }
+}, 10000); //10,000 milliseconds = 10 seconds
 
 //EMAIL VALIDATION
 
