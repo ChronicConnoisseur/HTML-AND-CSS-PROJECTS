@@ -1,66 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Home</title>
-        <meta charset="UTF-8">
-        <link href="css/one_page_website.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <header>
-        <h3>Home</h3>
-    </header>
-    <p>Welcome to the homepage on my one page site</p>
-    <body>
-        <!--Nav bar-->
-        <nav>
-            <ul>
-                <a href="#images" aria-label="images"><li>Images</li></a>
-                <a href="#videos"aria-label="video section"><li>Videos</li></a>
-                <a href="#contact" aria-label="Contact"><li>Contact Us!</li></a>
-            </ul>
-        </nav>
-        <!--Pics-->
-        <div id="images">
-            <h3>Images</h3>
-            <img src="../The-Pet-Shop-Website/images/llama.jpg" alt="Picture of llama"></a><br>
-        </div>
-        <!--Videos-->
-        <div id="videos">
-            <h3>Videos</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bn9F19Hi1Lk?si=QPafGUFgULKq9PGf" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen alt="Video of the beach and sounds"></iframe>
-        </div>
-        <!--Contact form section-->
-        <section>
-            <div>
-                <h3>Please provide your contact information, 
-                    because I want it!
-                </h3>
-                <div id="contact">
-                    <form>
-                        <input type="text" placeholder="First Name">
-                        <input type="Text" placeholder="Last Name"><br>
-                        <input type="email" placeholder="Email">
-                        <input type="tel" placeholder="Phone Number"><br>
-                        <input type="Submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <!--Footer-->
-        <footer>
-            <table>
-                <tr>
-                    <td>
-                        <p>One Page Site&copy;</p>
-                    </td>
-                    <td>
-                        5564 Moon St, Mars
-                    </td>
-                </tr>
-            </table>
-        </footer>
-    </body>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <link href="css/one_page_website.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/main.js"></script>
+</head>
+<header>
+    <h3>Home</h3>
+</header>
+<p>Welcome to the homepage on my one page site</p>
+
+<body>
+    <!--Nav bar-->
+    <nav>
+        <ul>
+            <a href="#images" aria-label="images">
+                <li>Images</li>
+            </a>
+            <a href="#videos" aria-label="video section">
+                <li>Videos</li>
+            </a>
+            <a href="#contact" aria-label="Contact">
+                <li>Contact Us!</li>
+            </a>
+        </ul>
+    </nav>
+    <!--Pics-->
+    <div id="images">
+        <h3>Images</h3>
+        <div class="row">
+            <div class="column">
+                <img src="images/img_mountains.jpg" alt="Picture of mountains"
+                    onclick="openModal();currentSlide(1)" class="hover-shadow"><br>
+            </div>
+            <div class="column">
+                <img src="images/img_nature.jpg" alt="Picture of Nature"
+                    onclick="openModal();currentSlide(1)" class="hover-shadow"><br>
+            </div>
+            <div class="column">
+                <img src="images/img_snow.jpg" alt="picture of Snow"
+                    onclick="openModal();currentSlide(1)" class="hover-shadow"><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/img_mountains.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/img_nature.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/img_snow.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="images/img_mountains.jpg" onclick="currentSlide(1)" alt="Mountains">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/img_nature.jpg" onclick="currentSlide(2)" alt="Nature">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/img_snow.jpg" onclick="currentSlide(3)"
+                    alt="Snow">
+            </div>
+        </div>
+    </div>
+    <!--Videos-->
+    <div id="videos">
+        <h3>Videos</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bn9F19Hi1Lk?si=QPafGUFgULKq9PGf"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+            alt="Video of the beach and sounds"></iframe>
+    </div>
+    <!--Contact form section-->
+    <section>
+        <div>
+            <h3>Please provide your contact information,
+                because I want it!
+            </h3>
+            <div id="contact">
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="Text" placeholder="Last Name"><br>
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Phone Number"><br>
+                    <input type="Submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <p>One Page Site&copy;</p>
+                </td>
+                <td>
+                    5564 Moon St, Mars
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
 </html>
